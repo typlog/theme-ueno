@@ -1,0 +1,24 @@
+{% block styles %}
+<link rel="stylesheet" href="{{ _static_url }}/index.css">
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ _static_url }}/index.js" type="module"></script>
+{% endblock %}
+
+{% block body %}
+{% include "./_partials/header.j2" %}
+
+<main class="main">
+  <section class="page-head">
+    <h1>{{ column.title }}</h1>
+    {% if column.subtitle %}
+      <h2>{{ column.subtitle }}</h2>
+    {% endif %}
+  </section>
+  {% include "./_partials/entries.j2" %}
+  {% include "./_partials/navigation.j2" %}
+</main>
+
+{% include "./_partials/footer.j2" %}
+{% endblock %}

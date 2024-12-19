@@ -1,0 +1,27 @@
+{% block styles %}
+<link rel="stylesheet" href="{{ _static_url }}/index.css">
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ _static_url }}/index.js" type="module"></script>
+{% endblock %}
+
+{% block body %}
+{% include "./_partials/header.j2" %}
+
+<main class="main">
+  <div class="entries">
+    {% for note in query.paginate_notes() %}
+    <article class="h-entry">
+      <h2 class="p-name">
+        <a href="{{ note.url }}">{{ note.title }}</a>
+      </h2>
+      <p class="p-summary">{{ note.summary }}</p>
+      {% include "./_partials/entry-meta.j2" %}
+    </article>
+    {% endfor %}
+  </div>
+</main>
+
+{% include "./_partials/footer.j2" %}
+{% endblock %}

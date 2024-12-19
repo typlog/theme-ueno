@@ -1,0 +1,63 @@
+{
+  "name": "basic",
+  "version": "0.1.0",
+  "repo": "typlog/theme-basic",
+  "context": {
+    "_static_url": "/src",
+    "theme_nav_links": [
+      {
+        "title": "Blog",
+        "url": "/blog/"
+      },
+      {
+        "title": "GitHub",
+        "url": "https://github.com/typlog/theme-basic",
+        "blank": true
+      }
+    ]
+  },
+  "variables": {
+    "color_mode": {
+      "type": "enum",
+      "default": "auto",
+      "choices": ["auto", "light", "dark"]
+    },
+    "nav_links": {
+      "type": "object[]",
+      "properties": {
+        "title": {
+          "type": "string",
+          "required": true
+        },
+        "url": {
+          "type": "url",
+          "required": true
+        },
+        "blank": {
+          "type": "boolean"
+        }
+      }
+    },
+    "copyright": {
+      "type": "string"
+    }
+  },
+  "messages": {
+    "none": "There is no items",
+    "none#zh": "没有内容",
+    "archive": "Archive",
+    "archive#zh": "归档",
+    "prev": "Previous",
+    "prev#zh": "上一页",
+    "next": "Next",
+    "next#zh": "下一页",
+    "switch_auto": "Switch to auto color mode",
+    "switch_auto#zh": "切换至系统默认模式",
+    "switch_light": "Switch to light color mode",
+    "switch_light#zh": "切换至明亮模式",
+    "switch_dark": "Switch to dark color mode",
+    "switch_dark#zh": "切换至黑暗模式",
+    "copy": "Copy",
+    "copy#zh": "复制"
+  }
+}
