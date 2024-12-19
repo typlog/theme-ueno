@@ -34,7 +34,7 @@
               {% if episode.season and episode.episode %}
                 <span class="item-label">S{{ episode.season }}E{{ episode.episode }}</span>
               {% endif %}
-              <span class="item-label">{{ episode.audio.duration }}</span>
+              <span class="item-label">{{ episode.audio.duration|durationformat }}</span>
             {% endif %}
             {% if note.published_at %}
               <time class="dt-published" datetime="{{ note.published_at|xmldatetime }}"
@@ -46,6 +46,16 @@
             <h2 class="p-summary">{{ note.subtitle }}</h2>
           {% endif %}
           <div class="e-content yue dark-code" itemprop="articleBody">
+            {% if note.note_type == 'audio' %}
+              {% set episode = note.audio %}
+              <div class="entry-audio js-audio">
+                <audio class="u-audio" src="{{ episode.audio.src }}" preload="none" controls
+                      data-title="{{ note.title }}"
+                      data-duration="{{ episode.audio.duration }}"
+                      {% if episode.image %}data-image="{{ episode.image }}"{% endif %}>
+                </audio>
+              </div>
+            {% endif %}
             {{ note.content|safe }}
           </div>
           {% if note.tags %}
