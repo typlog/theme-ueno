@@ -1,5 +1,7 @@
 @import '@radix-ui/colors/gray.css';
 @import '@radix-ui/colors/gray-dark.css';
+@import '@radix-ui/colors/gray-alpha.css';
+@import '@radix-ui/colors/gray-dark-alpha.css';
 @import '@radix-ui/colors/blue.css';
 @import '@radix-ui/colors/blue-dark.css';
 
@@ -30,19 +32,20 @@
   --accent-12: var(--blue-12);
 
   --text-color: var(--gray-12);
+  --background-color: #fff;
 
   /* copied from legacy ueno theme */
   --un-rc-base: 255, 255, 255;
   --un-rc-invert: 0, 0, 0;
-  --un-c-bg: #fff;
   --un-c-bg-weak: #f9f9f9;
   --un-c-bg-mute: #f1f1f1;
 }
 
 .dark {
+  --background-color: #212328;
+
   --un-rc-base: 0, 0, 0;
   --un-rc-invert: 255, 255, 255;
-  --un-c-bg: #2a2c31;
   --un-c-bg-weak: #3a3a3a;
   --un-c-bg-mute: #444;
 }
@@ -50,7 +53,7 @@
 body {
   font-family: var(--font-text);
   color: var(--text-color);
-  background-color: var(--un-c-bg);
+  background-color: var(--background-color);
 }
 
 .win {
