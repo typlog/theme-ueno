@@ -3,25 +3,23 @@
 {% endblock %}
 
 {% block scripts %}
+<script src="https://code.iconify.design/iconify-icon/2.2.0/iconify-icon.min.js"></script>
 <script src="{{ _static_url }}/index.js" type="module"></script>
 {% endblock %}
 
 {% block body %}
-{% include "./_partials/header.j2" %}
-
-<main class="main">
-  <div class="entries">
-    {% for note in query.paginate_notes() %}
-    <article class="h-entry">
-      <h2 class="p-name">
-        <a href="{{ note.url }}">{{ note.title }}</a>
-      </h2>
-      <p class="p-summary">{{ note.summary }}</p>
-      {% include "./_partials/entry-meta.j2" %}
-    </article>
-    {% endfor %}
+  <div class="absolute top-4 right-4">
+    {% include "./_partials/theme-switch.j2" %}
   </div>
-</main>
-
-{% include "./_partials/footer.j2" %}
+  <div class="body">
+    {% include "./_partials/site-side.j2" %}
+    <div class="main">
+      <div class="inner main_mark">
+        {% for note in query.paginate_notes() %}
+          {% include "./_partials/entry-item.j2" %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  {% include "./_partials/site-foot.j2" %}
 {% endblock %}

@@ -1,0 +1,13 @@
+<div class="site-foot">
+  <div class="site-foot_content">
+    <div class="site-foot_logo">
+      {% include "components/site_logo.j2" %}
+    </div>
+    <div class="site-foot_links">
+      <a href="/archive/">{{ translate('archive') }}</a>
+      {% for column in query.all_columns() %}
+        <a href="{{ column.url }}">{{ column.title }}</a>
+      {% endfor %}
+    </div>
+  </div>
+</div>

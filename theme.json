@@ -1,7 +1,7 @@
 {
-  "name": "basic",
+  "name": "ueno",
   "version": "0.1.0",
-  "repo": "typlog/theme-basic",
+  "repo": "typlog/theme-ueno",
   "context": {
     "_static_url": "/src",
     "theme_nav_links": [
@@ -11,8 +11,20 @@
       },
       {
         "title": "GitHub",
-        "url": "https://github.com/typlog/theme-basic",
+        "url": "https://github.com/typlog/theme-ueno",
         "blank": true
+      }
+    ],
+    "theme_social_links": [
+      {
+        "icon": "simple-icons:github",
+        "title": "GitHub",
+        "url": "https://github.com/typlog/theme-ueno"
+      },
+      {
+        "icon": "prime:twitter",
+        "title": "Twitter (X)",
+        "url": "https://x.com/typlog"
       }
     ]
   },
@@ -30,11 +42,50 @@
           "required": true
         },
         "url": {
-          "type": "url",
+          "type": "string",
           "required": true
         },
         "blank": {
           "type": "boolean"
+        }
+      },
+      "podcast_links": {
+        "type": "object[]",
+        "properties": {
+          "icon": {
+            "type": "icon"
+          },
+          "title": {
+            "type": "string",
+            "required": true
+          },
+          "url": {
+            "type": "url",
+            "required": true
+          },
+          "blank": {
+            "type": "boolean"
+          }
+        }
+      },
+      "social_links": {
+        "type": "object[]",
+        "properties": {
+          "icon": {
+            "type": "icon",
+            "required": true
+          },
+          "title": {
+            "type": "string",
+            "required": true
+          },
+          "url": {
+            "type": "url",
+            "required": true
+          },
+          "blank": {
+            "type": "boolean"
+          }
         }
       }
     },

@@ -1,0 +1,30 @@
+{% if note.note_type == 'post' %}
+  <div id="item-{{ note.id }}" class="item Article {% if note.cover %}Cover{% else %}Text{% endif %}" lang="{{ note.lang }}">
+    {% if note.cover %}
+      <a class="item-cover" href="{{ note.url }}">
+        <div class="item-cover_image">
+          <div class="js-cover" data-src="{{ note.cover|thumbnail }}"></div>
+        </div>
+        <div class="item-cover_inner">
+          <time class="js-time" datetime="{{ note.published_at|xmldatetime }}">{{ note.published_at|dateformat('%b %d, %Y') }}</time>
+          <h3>{{ note.title }}</h3>
+          {%- if note.subtitle -%}
+            <h4>{{ note.subtitle }}</h4>
+          {% endif %}
+        </div>
+      </a>
+    {% else %}
+      <div class="item-meta">
+        <time class="js-time" datetime="{{ note.published_at|xmldatetime }}">{{ note.published_at|dateformat('%b %d, %Y') }}</time>
+      </div>
+      <a class="item-main" href="{{ note.url }}">
+        <h3>{{ note.title }}</h3>
+        {% if note.subtitle %}
+          <div class="item-subtitle">{{ note.subtitle }}</div>
+        {% endif %}
+      </a>
+    {% endif %}
+  </div>
+{% elif note.note_type == 'audio' %}
+{% elif note.note_type == 'review' %}
+{%- endif -%}

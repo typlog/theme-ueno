@@ -6,28 +6,12 @@ button.theme-switch {
   cursor: pointer;
 }
 
-.theme-switch:before {
-  display: none;
-  content: "";
-  position: absolute;
-  top: auto;
-  right: 50%;
-  bottom: -7px;
-  margin-right: -5px;
-  width: 0;
-  height: 0;
-  border: 5px solid transparent;
-  border-bottom-color: var(--gray-12);
-  pointer-events: none;
-  z-index: 10000;
-}
-
 .theme-switch:after {
   display: none;
   content: attr(aria-label);
   position: absolute;
   top: 100%;
-  right: 50%;
+  right: 0;
   padding: 0 10px;
   border-radius: 3px;
   background-color: var(--gray-12);
@@ -38,7 +22,7 @@ button.theme-switch {
   z-index: 10000;
   margin-top: 5px;
   line-height: 26px;
-  transform: translateX(50%);
+  transform: translateX(0);
 }
 
 .theme-switch:hover:before,
@@ -66,4 +50,14 @@ button.theme-switch {
 }
 [data-color-mode="dark"] .theme-switch .theme-icon {
   --icon-url: var(--lucide-moon-url);
+}
+
+.light-logo, .dark-logo {
+  display: none;
+}
+.light .light-logo {
+  display: inline-block;
+}
+.dark .dark-logo {
+  display: inline-block;
 }

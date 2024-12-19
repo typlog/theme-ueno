@@ -1,0 +1,52 @@
+<aside class="side">
+  <div class="inner">
+    {% if site.glyph_logo_light %}
+      {% if site.glyph_logo_dark %}
+        <a class="side_logo light-logo" href="/">
+          <img src="{{ site.glyph_logo_light|thumbnail('ss') }}" loading="lazy" alt="{{ site.name }}" width="120" height="120" />
+        </a>
+        <a class="side_logo dark-logo" href="/">
+          <img src="{{ site.glyph_logo_dark|thumbnail('ss') }}" loading="lazy" alt="{{ site.name }}" width="120" height="120"/>
+        </a>
+      {% else %}
+        <a class="side_logo light-logo dark-logo" href="/">
+          <img src="{{ site.glyph_logo_light|thumbnail('ss') }}" loading="lazy" alt="{{ site.name }}" width="120" height="120"/>
+        </a>
+      {% endif %}
+    {% endif %}
+
+    <h1 class="side_title"><a class="h-card" rel="me" href="/">{{ site.name }}</a></h1>
+    {% if site.description %}
+      <div class="side_description">{{ site.description }}</div>
+    {% endif %}
+
+    {% if theme_nav_links %}
+      <ul class="side_links">
+        {% for nav in theme_nav_links %}
+          <li><a href="{{ nav.url }}"{% if nav.blank %} target="_blank"{% endif %}>{{ nav.title }}</a></li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+    {% if theme_podcast_links %}
+      <ul class="side_links">
+        {% for item in podcast_links %}
+          <li><a href="{{ item.url }}"{% if item.blank %} target="_blank"{% endif %}>
+            {% if item.icon %}<iconify-icon icon="{{ item.icon }}"></iconify-icon>{% endif %}
+            <span>{{ item.title }}</span>
+          </a></li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+    {% if theme_social_links %}
+    <nav class="side_social">
+      {% for item in theme_social_links %}
+        <a href="{{ item.url }}"{% if item.blank %} target="_blank"{% endif %} aria-label="{{ item.title }}">
+          <iconify-icon icon="{{ item.icon }}"></iconify-icon>
+        </a>
+      {% endfor %}
+    </nav>
+    {% endif %}
+  </div>
+</aside>

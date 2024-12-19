@@ -3,11 +3,21 @@
 {% endblock %}
 
 {% block scripts %}
+<script src="https://code.iconify.design/iconify-icon/2.2.0/iconify-icon.min.js"></script>
 <script src="{{ _static_url }}/index.js" type="module"></script>
 {% endblock %}
 
 {% block body %}
-{% include "./_partials/header.j2" %}
-{{ body }}
-{% include "./_partials/footer.j2" %}
+  <div class="absolute top-4 right-4">
+    {% include "./_partials/theme-switch.j2" %}
+  </div>
+  <div class="body">
+    {% include "./_partials/site-side.j2" %}
+    <div class="main">
+      <div class="inner main_mark">
+        {{ body }}
+      </div>
+    </div>
+  </div>
+  {% include "./_partials/site-foot.j2" %}
 {% endblock %}

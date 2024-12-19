@@ -9,10 +9,11 @@
   --lucide-moon-url:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'%3E%3Cpath d='M12 3a6.364 6.364 0 0 0 9 9 9 9 0 1 1-9-9z'/%3E%3C/svg%3E");
   --lucide-sun-url:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'%3E%3Ccircle cx='12' cy='12' r='4'/%3E%3Cpath d='M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41'/%3E%3C/svg%3E");
 
-  --font-sys: -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Droid Sans, Helvetica Neue;
+  --font-sans: -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Droid Sans, Helvetica Neue;
+  --font-serif: "Times New Roman", Georgia, Palatino, Times;
   --font-cjk: PingFang SC, Hiragino Sans GB, Droid Sans Fallback, Microsoft YaHei;
-  --font-heading: var(--font-sys), var(--font-cjk), sans-serif;
-  --font-text: var(--font-sys), var(--font-cjk), sans-serif;
+  --font-heading: var(--font-sans), var(--font-cjk), sans-serif;
+  --font-text: var(--font-sans), var(--font-cjk), sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
   --accent-1: var(--blue-1);
@@ -29,13 +30,43 @@
   --accent-12: var(--blue-12);
 
   --text-color: var(--gray-12);
+
+  /* copied from legacy ueno theme */
+  --un-rc-base: 255, 255, 255;
+  --un-rc-invert: 0, 0, 0;
+  --un-c-bg: #fff;
+  --un-c-bg-weak: #f9f9f9;
+  --un-c-bg-mute: #f1f1f1;
+}
+
+.dark {
+  --un-rc-base: 0, 0, 0;
+  --un-rc-invert: 255, 255, 255;
+  --un-c-bg: #2a2c31;
+  --un-c-bg-weak: #3a3a3a;
+  --un-c-bg-mute: #444;
 }
 
 body {
   font-family: var(--font-text);
   color: var(--text-color);
+  background-color: var(--un-c-bg);
 }
 
 .win {
   font-family: "Twemoji Country Flags", var(--font-text);
+}
+
+.yue {
+  --yue-f-base: merriweather, var(--font-serif), var(--font-cjk), serif;
+  --yue-f-quote: var(--yue-f-base);
+  --yue-f-heading: var(--font-heading);
+  --yue-f-mono: var(--font-mono);
+  --yue-c-accent: var(--accent-9);
+  --yue-c-tr: rgba(var(--un-rc-invert), 0.6);
+  --yue-c-divider: var(--un-c-divider);
+
+  --yue-c-bc: rgba(240, 240, 240, 0.92);
+  --yue-c-bc-bg: #21232a;
+  --yue-c-bc-gutter: #1d202d;
 }
