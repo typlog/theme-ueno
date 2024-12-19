@@ -6,7 +6,7 @@
 }
 .entry-meta a {
   text-decoration: none;
-  color: var(----gray-10);
+  color: var(--gray-10);
   font-weight: 700;
 }
 
@@ -45,12 +45,6 @@ time.dt-published {
   margin-left: 4px;
 }
 
-.entry-link {
-  padding: 1em;
-  background: var(--un-c-bg-mute);
-  border-left: 4px solid rgba(var(--t-rc-primary), 0.6);
-}
-
 .entry-cover {
   margin-bottom: 2em;
 }
@@ -65,7 +59,7 @@ time.dt-published {
 }
 
 .h-entry .shk-player {
-  border: 1px solid var(--un-c-divider);
+  border: 1px solid var(--gray-a5);
   font-family: inherit;
 }
 
@@ -77,25 +71,25 @@ time.dt-published {
 }
 
 .e-content a {
-  color: var(----gray-12);
+  color: var(--gray-12);
   text-decoration: underline;
-  text-decoration-color: var(----accent-9);
+  text-decoration-color: var(--accent-9);
 }
 
 .e-content del {
-  color: var(----gray-10);
+  color: var(--gray-10);
   text-decoration: line-through;
-  text-decoration-color: var(----accent-9);
+  text-decoration-color: var(--accent-9);
 }
 
 .e-content a:hover,
 .e-content a:hover > em,
 .e-content a:hover > strong {
-  color: var(--un-c-accent);
+  color: var(--accent-9);
 }
 
 .e-content .code-head {
-  font-family: var(--un-f-base);
+  font-family: var(--font-text);
   border-bottom: 1px solid rgba(0, 0, 0, 0.9);
   border-radius: 4px 4px 0 0;
 }
@@ -141,7 +135,7 @@ time.dt-published {
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: var(----gray-10);
+  color: var(--gray-10);
 }
 
 .prev-subject .item {
@@ -155,7 +149,7 @@ time.dt-published {
 .prev-subject .item h3 {
   margin: 0.2em 0;
   font-size: 1.3em;
-  color: var(----gray-12);
+  color: var(--gray-12);
 }
 
 .prev-subject .item-subtitle {

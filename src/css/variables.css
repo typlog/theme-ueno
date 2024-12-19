@@ -33,21 +33,10 @@
 
   --text-color: var(--gray-12);
   --background-color: #fff;
-
-  /* copied from legacy ueno theme */
-  --un-rc-base: 255, 255, 255;
-  --un-rc-invert: 0, 0, 0;
-  --un-c-bg-weak: #f9f9f9;
-  --un-c-bg-mute: #f1f1f1;
 }
 
 .dark {
   --background-color: #212328;
-
-  --un-rc-base: 0, 0, 0;
-  --un-rc-invert: 255, 255, 255;
-  --un-c-bg-weak: #3a3a3a;
-  --un-c-bg-mute: #444;
 }
 
 body {
@@ -66,8 +55,7 @@ body {
   --yue-f-heading: var(--font-heading);
   --yue-f-mono: var(--font-mono);
   --yue-c-accent: var(--accent-9);
-  --yue-c-tr: rgba(var(--un-rc-invert), 0.6);
-  --yue-c-divider: var(--un-c-divider);
+  --yue-c-divider: var(--gray-a3);
 
   --yue-c-bc: rgba(240, 240, 240, 0.92);
   --yue-c-bc-bg: #21232a;

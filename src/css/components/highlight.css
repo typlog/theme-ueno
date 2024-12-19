@@ -3,6 +3,10 @@
   margin-top: 2rem;
   margin-bottom: 2rem;
   border-radius: 0.375rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: var(--syntax-text);
+  background-color: var(--syntax-pre-bg);
   @apply max-sm:-mx-6 max-sm:rounded-none;
 }
 
@@ -85,7 +89,7 @@ clipboard-copy {
 clipboard-copy svg {
   width: 0.825rem;
   height: 0.825rem;
-  fill: var(--tw-prose-pre-code);
+  fill: #f7f7f7;
 }
 
 clipboard-copy svg + svg {

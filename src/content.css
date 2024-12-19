@@ -4,6 +4,7 @@
 @import "./css/components/admonition.css";
 @import "./css/components/highlight.css";
 @import "./css/components/share-buttons.css";
+@import "./css/components/enjoy-button.css";
 
 h1.p-name {
   font-size: 38px;

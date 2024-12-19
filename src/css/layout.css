@@ -90,7 +90,7 @@
   margin: 2em 0 1em;
 }
 .side_search input {
-  border: 2px solid rgba(var(--un-rc-invert), 0.36);
+  border: 2px solid var(--gray-a5);
   border-radius: 16px;
   padding: 4px 12px;
   font-size: 14px;
