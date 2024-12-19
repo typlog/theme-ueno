@@ -3,6 +3,7 @@
 @import "./css/components/table.css";
 @import "./css/components/admonition.css";
 @import "./css/components/highlight.css";
+@import "./css/components/share-buttons.css";
 
 h1.p-name {
   font-size: 38px;
@@ -17,7 +18,7 @@ h2.p-summary {
   margin-bottom: 10px;
   font-size: 22px;
   font-weight: 300;
-  color: var(----gray-10);
+  color: var(--gray-10);
 }
 
 .e-content {
