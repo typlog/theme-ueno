@@ -14,18 +14,6 @@
         "url": "https://github.com/typlog/theme-ueno",
         "blank": true
       }
-    ],
-    "theme_social_links": [
-      {
-        "icon": "simple-icons:github",
-        "title": "GitHub",
-        "url": "https://github.com/typlog/theme-ueno"
-      },
-      {
-        "icon": "prime:twitter",
-        "title": "Twitter (X)",
-        "url": "https://x.com/typlog"
-      }
     ]
   },
   "variables": {
@@ -48,44 +36,44 @@
         "blank": {
           "type": "boolean"
         }
-      },
-      "podcast_links": {
-        "type": "object[]",
-        "properties": {
-          "icon": {
-            "type": "icon"
-          },
-          "title": {
-            "type": "string",
-            "required": true
-          },
-          "url": {
-            "type": "url",
-            "required": true
-          },
-          "blank": {
-            "type": "boolean"
-          }
+      }
+    },
+    "podcast_links": {
+      "type": "object[]",
+      "properties": {
+        "icon": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string",
+          "required": true
+        },
+        "url": {
+          "type": "url",
+          "required": true
+        },
+        "blank": {
+          "type": "boolean"
         }
-      },
-      "social_links": {
-        "type": "object[]",
-        "properties": {
-          "icon": {
-            "type": "icon",
-            "required": true
-          },
-          "title": {
-            "type": "string",
-            "required": true
-          },
-          "url": {
-            "type": "url",
-            "required": true
-          },
-          "blank": {
-            "type": "boolean"
-          }
+      }
+    },
+    "social_links": {
+      "type": "object[]",
+      "properties": {
+        "icon": {
+          "type": "string",
+          "required": true
+        },
+        "title": {
+          "type": "string",
+          "required": true
+        },
+        "url": {
+          "type": "url",
+          "required": true
+        },
+        "blank": {
+          "type": "boolean"
         }
       }
     },

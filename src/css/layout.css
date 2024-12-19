@@ -69,7 +69,11 @@
 .side_links li {
   margin: .4em 0;
 }
+
 .side_links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   font-weight: 600;
   font-size: 14px;
   text-decoration: none;
@@ -81,7 +85,7 @@
   color: var(--accent-9);
   border-color: var(--accent-9);
 }
-.side_links .icon {
+.side_links iconify-icon {
   opacity: 0.4;
   margin-right: 4px;
 }
@@ -205,17 +209,6 @@
   .side_links li {
     display: inline-block;
     margin: .4em;
-  }
-  .side_links .subscribe {
-    display: block;
-  }
-  .side_links._podcast a {
-    display: inline-block;
-    border: 3px solid var(--un-c-divider);
-    padding: 4px 10px;
-  }
-  .side_links._podcast a:hover {
-    border-color: var(--accent-9);
   }
   .main {
     padding-top: 40px;

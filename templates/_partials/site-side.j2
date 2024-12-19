@@ -30,7 +30,7 @@
 
     {% if theme_podcast_links %}
       <ul class="side_links">
-        {% for item in podcast_links %}
+        {% for item in theme_podcast_links %}
           <li><a href="{{ item.url }}"{% if item.blank %} target="_blank"{% endif %}>
             {% if item.icon %}<iconify-icon icon="{{ item.icon }}"></iconify-icon>{% endif %}
             <span>{{ item.title }}</span>
