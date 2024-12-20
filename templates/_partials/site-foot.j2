@@ -11,3 +11,10 @@
     </div>
   </div>
 </div>
+{% if theme_copyright %}
+<div class="site-copyright">
+  <div class="site-copyright_content">
+    {{ theme_copyright|safe }}
+  </div>
+</div>
+{% endif %}

@@ -14,7 +14,8 @@
         "url": "https://github.com/typlog/theme-ueno",
         "blank": true
       }
-    ]
+    ],
+    "theme_copyright": "Copy &copy; 2024, <a href='https://typlog.com/'>Typlog</a>"
   },
   "variables": {
     "color_mode": {
