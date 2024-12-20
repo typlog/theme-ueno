@@ -1,5 +1,13 @@
+{% set has_content = 'class="e-content"' in body %}
+
 {% block styles %}
-<link rel="stylesheet" href="{{ _static_url }}/index.css">
+{% if has_content %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://s3.typlog.com/npm/@typlog/yue@1.1.1/yue.css">
+{% endif %}
+<link rel="stylesheet" href="{{ _static_url }}/page.css">
 {% endblock %}
 
 {% block scripts %}
@@ -20,4 +28,7 @@
     </div>
   </div>
   {% include "./_partials/site-foot.j2" %}
+  {% if has_content %}
+  <script>document.querySelectorAll('.e-content').forEach(el => el.classList.add('yue'))</script>
+  {% endif %}
 {% endblock %}
