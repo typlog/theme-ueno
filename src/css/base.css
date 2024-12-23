@@ -10,6 +10,9 @@
 body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  font-family: var(--font-text);
+  color: var(--text-color);
+  background-color: var(--background-color);
 }
 
 a {
@@ -18,4 +21,14 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+.win {
+  font-family: "Twemoji Country Flags", var(--font-text);
 }

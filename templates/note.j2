@@ -1,10 +1,7 @@
-{% set shiki_options = {'theme': 'github-dark'} %}
-
 {% block styles %}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@typlog/yue@1.1.1/yue.css">
 <link rel="stylesheet" href="{{ _static_url }}/content.css">
 {% endblock %}
 
@@ -45,7 +42,7 @@
           {% if note.subtitle %}
             <h2 class="p-summary">{{ note.subtitle }}</h2>
           {% endif %}
-          <div class="e-content yue dark-code" itemprop="articleBody">
+          <div class="e-content" itemprop="articleBody">
             {% if note.note_type == 'audio' %}
               {% set episode = note.audio %}
               <div class="entry-audio js-audio">
@@ -86,6 +83,9 @@
             </div>
           </section>
         {% endif %}
+        <section class="entry-comments">
+          {% include "components/web-comment.j2" %}
+        </section>
       </div>
     </div>
   </div>

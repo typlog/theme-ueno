@@ -1,10 +1,3 @@
 @import "./index.css";
 @import "./css/components/h-entry.css";
-
-.main {
-  --section-padding-inline: 0;
-}
-
-.Article[data-index="0"] {
-  padding-top: 0;
-}
+@import "./css/components/e-content.css";

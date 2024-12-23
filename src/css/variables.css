@@ -17,32 +17,11 @@
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
   --text-color: var(--gray-12);
+  --heading-color: #000;
   --background-color: #fff;
 }
 
 .dark {
+  --heading-color: #fff;
   --background-color: #212328;
-}
-
-body {
-  font-family: var(--font-text);
-  color: var(--text-color);
-  background-color: var(--background-color);
-}
-
-.win {
-  font-family: "Twemoji Country Flags", var(--font-text);
-}
-
-.yue {
-  --yue-f-base: merriweather, var(--font-serif), var(--font-cjk), serif;
-  --yue-f-quote: var(--yue-f-base);
-  --yue-f-heading: var(--font-heading);
-  --yue-f-mono: var(--font-mono);
-  --yue-c-accent: var(--accent-9);
-  --yue-c-divider: var(--gray-a3);
-
-  --yue-c-bc: rgba(240, 240, 240, 0.92);
-  --yue-c-bc-bg: #21232a;
-  --yue-c-bc-gutter: #1d202d;
 }
