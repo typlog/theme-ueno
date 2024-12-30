@@ -15,19 +15,22 @@
   color: white;
   background: var(--icon-color);
 }
-.entry-share a[data-type="wb"] {
+.entry-share a[data-type="weibo"] {
   --icon-color: #e24040;
 }
-.entry-share a[data-type="tw"] {
-  --icon-color: #1da1f2;
+.entry-share a[data-type="bluesky"] {
+  --icon-color: #0085ff;
 }
-.entry-share a[data-type="tg"] {
+.entry-share a[data-type="x"] {
+  --icon-color: #000;
+}
+.entry-share a[data-type="telegram"] {
   --icon-color: #179cde;
 }
-.entry-share a[data-type="wx"] {
+.entry-share a[data-type="wechat"] {
   --icon-color: #20b767;
 }
-.entry-share a[data-type="fb"] {
+.entry-share a[data-type="facebook"] {
   --icon-color: #1877F2;
 }
 
@@ -41,6 +44,7 @@
   background: white;
   box-sizing: border-box;
   padding: 2rem;
+  z-index: 99;
 }
 
 #wechat-share.show {
