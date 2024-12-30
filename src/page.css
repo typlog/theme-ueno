@@ -1,3 +1,11 @@
 @import "./index.css";
 @import "./css/components/h-entry.css";
 @import "./css/components/e-content.css";
+
+section[data-has-background="true"] {
+  border-radius: 1rem;
+}
+
+section[data-has-background="true"] + section[data-has-background="true"] {
+  margin-top: 1.625rem;
+}

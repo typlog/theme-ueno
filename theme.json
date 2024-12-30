@@ -6,6 +6,7 @@
   "description": "A two columns theme for blogs and podcasts.",
   "context": {
     "_static_url": "/src",
+    "theme_color_mode": "auto",
     "theme_nav_links": [
       {
         "title": "Blog",
