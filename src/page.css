@@ -1,6 +1,6 @@
 @import "./index.css";
 @import "./css/components/h-entry.css";
-@import "./css/components/e-content.css";
+@import "./css/content/e-content.css";
 
 section[data-has-background="true"] {
   border-radius: 1rem;
