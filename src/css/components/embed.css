@@ -1,0 +1,41 @@
+.schema {
+  background-color: var(--gray-a2);
+  border-radius: 6px;
+}
+
+.schema td {
+  padding: 0.825rem;
+  vertical-align: top;
+}
+
+.schema-image img {
+  object-fit: cover;
+  min-height: 100px;
+  min-width: 100px;
+  margin: 0;
+}
+
+.schema-image + .schema-info {
+  padding-left: 0;
+}
+
+.schema-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 0 0.825rem;
+}
+
+.schema-author {
+  font-size: 0.875rem;
+  color: var(--gray-a10);
+  margin-bottom: 0.625rem;
+}
+
+.schema-rating {
+  margin-bottom: 0.625rem;
+}
+
+.schema-description {
+  font-size: 0.925rem;
+  color: var(--gray-a11);
+}

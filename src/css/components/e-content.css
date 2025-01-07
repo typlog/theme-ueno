@@ -70,12 +70,30 @@
 }
 
 .e-content a {
-  color: var(--accent-9);
-  text-decoration: none;
+  color: var(--gray-12);
+  text-decoration: underline;
+  text-decoration-color: var(--accent-9);
 }
 
 .e-content a:hover {
-  text-decoration: underline;
+  color: var(--accent-9);
+}
+
+.e-content img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.e-content del {
+  color: var(--gray-10);
+  text-decoration: line-through;
+  text-decoration-color: var(--accent-9);
+}
+
+.e-content a:hover,
+.e-content a:hover > em,
+.e-content a:hover > strong {
+  color: var(--accent-9);
 }
 
 .e-content figure {

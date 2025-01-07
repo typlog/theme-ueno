@@ -20,11 +20,6 @@
     <div class="main">
       <div class="main_mark inner">
         <article role="main" class="h-entry" itemscope itemtype="http://schema.org/Article">
-          {% if note.cover and note.cover.src %}
-            <div class="entry-cover">
-              <img class="u-photo" src="{{ note.cover|thumbnail }}" alt="{{ note.title }} cover" width="{{ note.cover.width }}" height="{{ note.cover.height }}">
-            </div>
-          {% endif %}
           <div class="entry-meta">
             {% if note.note_type == 'audio' %}
               {% set episode = note.audio %}
@@ -41,6 +36,9 @@
           <h1 class="p-name" itemprop="headline">{{ note.title }}</h1>
           {% if note.subtitle %}
             <h2 class="p-summary">{{ note.subtitle }}</h2>
+          {% endif %}
+          {% if note.review %}
+            {% include "./_partials/review.j2" %}
           {% endif %}
           <div class="e-content" itemprop="articleBody">
             {% if note.note_type == 'audio' %}

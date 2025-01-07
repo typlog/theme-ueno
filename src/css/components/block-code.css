@@ -21,8 +21,6 @@
   margin-top: 2rem;
   margin-bottom: 2rem;
   border-radius: 0.375rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
   color: var(--text-color);
   background-color: var(--code-block-background);
 }
@@ -30,8 +28,7 @@
 .block-code pre {
   margin-top: 0;
   margin-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
+  padding: 1rem 0;
   overflow-x: auto;
 }
 
