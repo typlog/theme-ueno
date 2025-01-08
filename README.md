@@ -1,3 +1,3 @@
-# Basic theme template
+# UENO
 
-A basic template for Typlog theme development.
+A two columns theme for blogs and podcasts.
