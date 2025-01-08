@@ -3,6 +3,10 @@
   border-radius: 6px;
 }
 
+.e-content .schema {
+  margin-bottom: 1.2rem;
+}
+
 .schema td {
   padding: 0.825rem;
   vertical-align: top;
@@ -22,7 +26,11 @@
 .schema .schema-name {
   font-size: 1.25rem;
   font-weight: 700;
-  margin: 0 0 0.825rem;
+  margin: 0 0 0.25rem;
+}
+
+.schema:where([data-type="Review"]) .schema-name {
+  margin-bottom: 0.825rem;
 }
 
 .schema-author {
@@ -70,6 +78,55 @@
   text-decoration: none;
 }
 
+.opengraph,
+.oembed {
+  margin-bottom: 1.2rem;
+}
+
+.opengraph {
+  background-color: var(--gray-a2);
+  border-radius: 6px;
+}
+
+.opengraph:hover {
+  background-color: var(--accent-a3);
+}
+
+.opengraph > a {
+  display: flex;
+  gap: 0.825rem;
+  text-decoration: none;
+}
+
+.opengraph img {
+  height: 140px;
+  object-fit: cover;
+  border-radius: 6px 0 0 6px;
+}
+
+.opengraph-content {
+  padding-top: 0.5rem;
+  padding-right: 0.5rem;
+  height: 140px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.opengraph .p-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  font-style: normal;
+  margin: 0 0 0.25rem;
+}
+
+.opengraph .p-content {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 @media (max-width: 680px) {
   .schema .schema-name {
     font-size: 1.12rem;
@@ -77,5 +134,12 @@
   }
   .schema-author {
     margin-bottom: 0.2rem;
+  }
+  .opengraph img,
+  .opengraph-content {
+    height: 120px;
+  }
+  .opengraph .p-content {
+    -webkit-line-clamp: 2;
   }
 }
