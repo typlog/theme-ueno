@@ -21,7 +21,7 @@
       <div class="main_mark inner">
         <article role="main" class="h-entry" itemscope itemtype="http://schema.org/Article">
           <div class="entry-meta">
-            {% if note.note_type == 'audio' %}
+            {% if note.type == 'audio' %}
               {% set episode = note.audio %}
               {% if episode.season and episode.episode %}
                 <span class="item-label">S{{ episode.season }}E{{ episode.episode }}</span>
@@ -41,7 +41,7 @@
             {% include "./_partials/review.j2" %}
           {% endif %}
           <div class="e-content" itemprop="articleBody">
-            {% if note.note_type == 'audio' %}
+            {% if note.type == 'audio' %}
               {% set episode = note.audio %}
               <div class="entry-audio js-audio">
                 <audio class="u-audio" src="{{ episode.audio.src }}" preload="none" controls

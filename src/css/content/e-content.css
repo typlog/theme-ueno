@@ -1,6 +1,9 @@
 .e-content {
   font-family: merriweather, var(--font-serif), var(--font-cjk), serif;
 }
+:where(.e-content) > div {
+  margin-bottom: 1rem;
+}
 .e-content h1,
 .e-content h2,
 .e-content h3,
