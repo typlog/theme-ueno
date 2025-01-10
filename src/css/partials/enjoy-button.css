@@ -36,48 +36,7 @@
   }
 }
 
-button.enjoy:hover {
-  cursor: pointer;
-}
-button.enjoy:after {
-  content: "\2665";
-  user-select: none;
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  font-size: 20px;
-  opacity: 0;
-  color: var(--accent-9);
-}
-button.enjoy:hover:after {
-  animation: heartbeat 1s infinite;
-}
-button.enjoy:disabled {
-  border-color: var(--accent-9);
-  background-color: var(--accent-9);
-  color: var(--accent-contrast);
-  transition-property: color, background-color;
-  transition-delay: 0s, 1s;
-  transition-timing-function: ease-in;
-  transition-duration: 0.5s, 0s;
-
-}
-button.enjoy:disabled:after {
-  animation: scale-up 2s;
-}
-button.enjoy i.has-value {
-  margin-left: 0.4em;
-  font-style: normal;
-}
-
-.entry-enjoy button {
+.enjoy-button button {
   position: relative;
   z-index: 1;
   overflow: hidden;
@@ -96,12 +55,45 @@ button.enjoy i.has-value {
   outline: 0;
 }
 
-.entry-enjoy button:hover {
+.enjoy-button button:hover {
   cursor: pointer;
   outline: initial;
 }
+.enjoy-button button:after {
+  content: "\2665";
+  user-select: none;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  font-size: 20px;
+  opacity: 0;
+  color: var(--accent-9);
+}
+.enjoy-button button:hover:after {
+  animation: heartbeat 1s infinite;
+}
+.enjoy-button button:disabled {
+  border-color: var(--accent-9);
+  background-color: var(--accent-9);
+  color: var(--accent-contrast);
+  transition-property: color, background-color;
+  transition-delay: 0s, 1s;
+  transition-timing-function: ease-in;
+  transition-duration: 0.5s, 0s;
 
-.entry-enjoy button i {
+}
+.enjoy-button button:disabled:after {
+  animation: scale-up 2s;
+}
+
+.enjoy-button button i {
   font-style: normal;
   margin-left: 6px;
 }

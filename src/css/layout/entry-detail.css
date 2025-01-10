@@ -60,15 +60,6 @@ h2.p-summary {
   h2.p-summary {
     font-size: 20px;
   }
-
-  .schema .schema-name {
-    font-size: 1.12rem;
-    margin-bottom: 0.25rem;
-  }
-
-  .schema-author {
-    margin-bottom: 0.2rem;
-  }
 }
 
 .entry-meta {
@@ -143,58 +134,4 @@ time.dt-published {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 40px;
-}
-
-.entry-section {
-  padding: 20px 0;
-}
-
-.entry-section h2 {
-  margin: 0;
-  font-weight: 300;
-  font-size: 14px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: var(--gray-10);
-}
-
-.prev-subject .item {
-  font-size: 18px;
-  line-height: 1.42;
-  margin: 10px 0;
-  padding: 0;
-  border: 0;
-}
-
-.prev-subject .item h3 {
-  margin: 0.2em 0;
-  font-size: 1.3em;
-  color: var(--gray-12);
-}
-
-.prev-subject .item-subtitle {
-  font-size: 1em;
-}
-
-.prev-subject a:hover h3 {
-  color: var(--accent-9);
-}
-
-.prev-subject .item-meta {
-  margin: 0;
-}
-
-
-@media (max-width: 680px) {
-  .prev-subject h3 {
-    font-size: 1.2em;
-  }
-  .entry-share a[data-type="wx"] {
-    display: none;
-  }
-}
-@media (max-width: 520px) {
-  .prev-subject h3 {
-    font-size: 1.1em;
-  }
 }

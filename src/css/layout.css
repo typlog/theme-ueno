@@ -4,6 +4,12 @@
   max-width: 1280px;
 }
 
+button.theme-switch {
+  position: absolute !important;
+  top: 1.5rem;
+  right: 1.5rem;
+}
+
 .side {
   flex-basis: 300px;
   flex-shrink: 0;
@@ -173,26 +179,6 @@
   margin-top: 10px;
 }
 
-.navigation {
-  font-size: 18px;
-  font-weight: 700;
-  margin-top: 1em;
-  margin-left: -4px;
-  margin-right: -4px;
-}
-
-.navigation a {
-  margin: 4px;
-  color: var(--text-color);
-  text-decoration: none;
-  border-bottom: 3px solid transparent;
-}
-
-.navigation a:hover {
-  border-color: var(--accent-9);
-}
-
-
 @media (max-width: 1100px) {
   .body {
     display: block;
@@ -220,89 +206,5 @@
   }
   .main .inner:before {
     display: none;
-  }
-}
-
-
-.site-foot,
-.site-copyright {
-  padding-left: env(safe-area-inset-left);
-  padding-right: env(safe-area-inset-right);
-  border-top: 1px solid var(--gray-a4);
-}
-.site-foot_content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-family: var(--font-sans), sans-serif;
-  padding: 20px;
-  color: var(--text-color);
-}
-
-.site-foot_links a {
-  -webkit-font-smoothing: antialiased;
-  display: inline-block;
-  font-size: 14px;
-  font-weight: 600;
-  padding: 8px 0 4px;
-  text-decoration: none;
-  border-bottom: 3px solid transparent;
-  color: var(--gray-11);
-}
-
-.site-foot_links a:hover {
-  color: var(--accent-9);
-  border-color: var(--accent-9);
-}
-
-.site-foot_links a + a {
-  margin-left: 20px;
-}
-
-.site-foot_logo {
-  display: inline-block;
-  margin-right: 4px;
-}
-
-.site-foot_logo img {
-  height: 32px;
-  vertical-align: middle;
-}
-
-.site-foot_logo {
-  text-decoration: none;
-  font-size: 20px;
-  font-weight: 700;
-  color: var(--gray-12);
-  vertical-align: middle;
-}
-
-.site-copyright_content {
-  padding: 1rem;
-  color: var(--gray-10);
-  font-size: 0.875rem;
-  font-weight: 500;
-}
-
-.site-copyright a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.site-copyright a:hover {
-  text-decoration: underline;
-}
-
-@media (max-width: 680px) {
-  .site-foot_content {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .site-foot_links a {
-    padding: 0 0 2px 0;
-    border: 0;
-    border-bottom: 2px solid transparent;
-    border-radius: 0;
   }
 }

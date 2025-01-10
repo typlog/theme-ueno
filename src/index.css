@@ -3,6 +3,8 @@
 @import "normalize.css";
 @import "./css/layout.css";
 
-@import "./css/components/theme-switch.css";
-@import "./css/components/item.css";
-@import "./css/components/navigation.css";
+@import "./css/partials/theme-switch.css";
+@import "./css/partials/entry-item.css";
+@import "./css/partials/item-label.css";
+@import "./css/partials/navigation.css";
+@import "./css/partials/site-foot.css";

@@ -3,18 +3,16 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{{ _static_url }}/content.css">
+{% include "components/clipboard-copy.j2" %}
 {% endblock %}
 
 {% block scripts %}
 <script src="https://code.iconify.design/iconify-icon/2.2.0/iconify-icon.min.js"></script>
 <script src="{{ _static_url }}/index.js" type="module"></script>
-{% include "./_partials/copy-code.j2" %}
 {% endblock %}
 
 {% block body %}
-  <div class="absolute top-4 right-4">
-    {% include "./_partials/theme-switch.j2" %}
-  </div>
+  {% include "./_partials/theme-switch.j2" %}
   <div class="body">
     {% include "./_partials/site-side.j2" %}
     <div class="main">
@@ -38,49 +36,19 @@
             <h2 class="p-summary">{{ note.subtitle }}</h2>
           {% endif %}
           {% if note.review %}
-            {% include "./_partials/review.j2" %}
+            {% include "components/review.j2" %}
           {% endif %}
           <div class="e-content" itemprop="articleBody">
-            {% if note.type == 'audio' %}
-              {% set episode = note.audio %}
-              <div class="entry-audio js-audio">
-                <audio class="u-audio" src="{{ episode.audio.src }}" preload="none" controls
-                      data-title="{{ note.title }}"
-                      data-duration="{{ episode.audio.duration }}"
-                      {% if episode.image %}data-image="{{ episode.image }}"{% endif %}>
-                </audio>
-              </div>
-            {% endif %}
-            {{ note.content|safe }}
+            {% include "./_partials/entry-audio.j2" %}
+            {{ note.content }}
           </div>
-          {% if note.tags %}
-            <div class="entry-tags">
-              {% for tag in note.tags %}
-                <a class="p-category" href="{{ tag.url }}">{{ tag.title }}</a>
-              {% endfor %}
-            </div>
-          {% endif %}
+          {% include "./_partials/entry-tags.j2" %}
           <div class="entry-block">
-            <div class="entry-enjoy">
-              <button class="enjoy js-enjoy">Enjoy</button>
-            </div>
+            {% include "./_partials/enjoy-button.j2" %}
             {% include "./_partials/share-buttons.j2" %}
           </div>
-          {% set prev_note = query.previous_note(note.published_at) %}
         </article>
-        {% if prev_note %}
-          <section class="entry-section prev-subject">
-            <h2>{{ translate('readthis') }}</h2>
-            <div class="item" lang="{{ prev_note.lang }}">
-              <a class="item-main" href="{{ prev_note.url }}">
-                <h3>{{ prev_note.title }}</h3>
-                {% if prev_note.subtitle %}
-                <div class="item-subtitle">{{ prev_note.subtitle }}</div>
-                {% endif %}
-              </a>
-            </div>
-          </section>
-        {% endif %}
+        {% include "./_partials/previous-entry.j2" %}
         <section class="entry-comments">
           {% include "components/web-comment.j2" %}
         </section>
