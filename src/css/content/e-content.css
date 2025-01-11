@@ -1,5 +1,5 @@
 .e-content {
-  font-family: merriweather, var(--font-serif), var(--font-cjk), serif;
+  font-family: merriweather, var(--system-serif), var(--system-cjk), serif;
 }
 :where(.e-content) > div {
   margin-bottom: 1rem;
@@ -10,7 +10,7 @@
 .e-content h4,
 .e-content h5,
 .e-content h6 {
-  font-family: var(--font-heading);
+  font-family: var(--heading-font);
   color: var(--heading-color);
 }
 
@@ -164,7 +164,7 @@
 .e-content p > code,
 .e-content p > tt {
   font-size: 0.86em;
-  font-family: var(--font-mono);
+  font-family: var(--code-font);
   font-weight: 600;
   padding: 1px 3px;
   word-wrap: break-word;
@@ -172,7 +172,7 @@
 }
 
 .e-content pre {
-  font-family: var(--font-mono);
+  font-family: var(--code-font);
 }
 
 .e-content iframe {
