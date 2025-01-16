@@ -42,6 +42,7 @@
 .item.Text h3,
 .item.Image h3,
 .item.Review h3,
+.item.Photos h3,
 .item.Episode h3 {
   font-size: 26px;
   font-weight: 500;

@@ -5,14 +5,15 @@
 {% block scripts %}
 <script src="https://code.iconify.design/iconify-icon/2.2.0/iconify-icon.min.js"></script>
 <script src="{{ _static_url }}/index.js" type="module"></script>
+{% include "components/lightbox.j2" %}
 {% endblock %}
 
 {% block body %}
   {% include "./_partials/theme-switch.j2" %}
   <div class="body">
     {% include "./_partials/site-side.j2" %}
-    <div class="main">
-      <div class="inner main_mark">
+    <div class="main js-lightbox">
+      <div class="inner main_mark" data-page-container>
         <section class="main_head">
           <h1>{{ translate('archive') }}</h1>
         </section>
