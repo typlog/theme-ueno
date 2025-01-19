@@ -99,12 +99,6 @@ button.theme-switch {
 .side_search {
   margin: 2em 0 1em;
 }
-.side_search input {
-  border: 2px solid var(--gray-a5);
-  border-radius: 16px;
-  padding: 4px 12px;
-  font-size: 14px;
-}
 
 .main {
   flex-grow: 1;
@@ -195,6 +189,10 @@ button.theme-switch {
   .side_links li {
     display: inline-block;
     margin: .4em;
+  }
+  .side_search {
+    display: flex;
+    justify-content: center;
   }
   .main {
     padding-top: 40px;

@@ -2,6 +2,7 @@
 @import "./css/variables.css";
 @import "normalize.css";
 @import "./css/layout.css";
+@import "./css/extensions/docsearch.css";
 
 @import "./css/partials/theme-switch.css";
 @import "./css/partials/entry-item.css";
