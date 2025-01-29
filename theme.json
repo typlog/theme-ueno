@@ -2,7 +2,7 @@
   "name": "ueno",
   "name#ja": "上野",
   "name#zh": "上野",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "repo": "typlog/theme-ueno",
   "image": "https://user-images.githubusercontent.com/290496/183670180-bfd89bab-18fe-45f8-a9bc-485695f0f075.png",
   "description": "A two columns theme for blogs and podcasts.",
@@ -17,7 +17,7 @@
       {
         "title": "GitHub",
         "link": "https://github.com/typlog/theme-ueno",
-        "blank": true
+        "new_tab": true
       }
     ],
     "theme_copyright": "Copy &copy; 2024, <a href='https://typlog.com/'>Typlog</a>"
