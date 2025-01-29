@@ -12,81 +12,48 @@
     "theme_nav_links": [
       {
         "title": "Blog",
-        "url": "/blog/"
+        "link": "/blog/"
       },
       {
         "title": "GitHub",
-        "url": "https://github.com/typlog/theme-ueno",
+        "link": "https://github.com/typlog/theme-ueno",
         "blank": true
       }
     ],
     "theme_copyright": "Copy &copy; 2024, <a href='https://typlog.com/'>Typlog</a>"
   },
-  "variables": {
-    "color_mode": {
+  "config": [
+    {
+      "name": "color_mode",
       "type": "enum",
       "default": "auto",
-      "choices": ["auto", "light", "dark"]
-    },
-    "nav_links": {
-      "type": "object[]",
-      "properties": {
-        "title": {
-          "type": "string",
-          "required": true
-        },
-        "url": {
-          "type": "string",
-          "required": true
-        },
-        "blank": {
-          "type": "boolean"
-        }
+      "options": {
+        "choices": ["auto", "light", "dark"]
       }
     },
-    "podcast_links": {
-      "type": "object[]",
-      "properties": {
-        "icon": {
-          "type": "icon"
-        },
-        "title": {
-          "type": "string",
-          "required": true
-        },
-        "url": {
-          "type": "url",
-          "required": true
-        },
-        "blank": {
-          "type": "boolean"
-        }
-      }
-    },
-    "social_links": {
-      "type": "object[]",
-      "properties": {
-        "icon": {
-          "type": "icon",
-          "required": true
-        },
-        "title": {
-          "type": "string",
-          "required": true
-        },
-        "url": {
-          "type": "url",
-          "required": true
-        },
-        "blank": {
-          "type": "boolean"
-        }
-      }
-    },
-    "copyright": {
+    {
+      "name": "copyright",
       "type": "string"
+    },
+    {
+      "name": "nav_links",
+      "type": "NavLink",
+      "multiple": true,
+      "options": {
+        "children": false
+      }
+    },
+    {
+      "name": "podcast_links",
+      "type": "IconLink",
+      "multiple": true
+    },
+    {
+      "name": "social_links",
+      "type": "IconLink",
+      "multiple": true
     }
-  },
+  ],
   "messages": {
     "none": "There is no items",
     "none#zh": "没有内容",

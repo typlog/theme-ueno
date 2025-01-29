@@ -23,7 +23,7 @@
     {% if theme_nav_links %}
       <ul class="side_links">
         {% for nav in theme_nav_links %}
-          <li><a href="{{ nav.url }}"{% if nav.blank %} target="_blank"{% endif %}>{{ nav.title }}</a></li>
+          <li><a href="{{ nav.link }}"{% if nav.new_tab %} target="_blank"{% endif %}>{{ nav.title }}</a></li>
         {% endfor %}
       </ul>
     {% endif %}
@@ -31,7 +31,7 @@
     {% if theme_podcast_links %}
       <ul class="side_links">
         {% for item in theme_podcast_links %}
-          <li><a href="{{ item.url }}"{% if item.blank %} target="_blank"{% endif %}>
+          <li><a href="{{ item.link }}"{% if item.new_tab %} target="_blank"{% endif %}>
             {% if item.icon %}<iconify-icon icon="{{ item.icon }}"></iconify-icon>{% endif %}
             <span>{{ item.title }}</span>
           </a></li>
@@ -42,7 +42,7 @@
     {% if theme_social_links %}
     <nav class="side_social">
       {% for item in theme_social_links %}
-        <a href="{{ item.url }}"{% if item.blank %} target="_blank"{% endif %} aria-label="{{ item.title }}">
+        <a href="{{ item.link }}"{% if item.new_tab %} target="_blank"{% endif %} aria-label="{{ item.title }}">
           <iconify-icon icon="{{ item.icon }}"></iconify-icon>
         </a>
       {% endfor %}
