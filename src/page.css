@@ -1,5 +1,5 @@
 @import "./index.css";
-@import "./css/components/h-entry.css";
+@import "./css/layout/entry-detail.css";
 @import "./css/content/e-content.css";
 
 section[data-has-background="true"] {
