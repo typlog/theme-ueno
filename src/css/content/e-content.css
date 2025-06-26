@@ -141,14 +141,27 @@
   font: bold 48px/1 "Times New Roman", Georgia, Palatino, Times, serif;
 }
 
+
 .e-content ul,
 .e-content ol {
   margin: 0 0 24px 6px;
   padding-left: 16px;
 }
 
+.e-content ul {
+  list-style-type: disc;
+}
+
+.e-content ol {
+  list-style-type: decimal;
+}
+
 .e-content li {
-  margin-bottom: 0.2em;
+  margin-bottom: 0.2rem;
+}
+
+.e-content li::marker {
+  color: var(--gray-10);
 }
 
 .e-content li ul,
@@ -158,14 +171,14 @@
 }
 
 .e-content li p {
-  margin: 0.4em 0 0.6em;
+  margin: 0.4rem 0 0.6rem;
 }
 
 .e-content li > code,
 .e-content p > code,
 .e-content p > tt {
-  font-size: 0.86em;
-  font-family: var(--code-font);
+  font-size: 0.86rem;
+  font-family: var(--default-mono-font-family);
   font-weight: 600;
   padding: 1px 3px;
   word-wrap: break-word;
@@ -173,7 +186,7 @@
 }
 
 .e-content pre {
-  font-family: var(--code-font);
+  font-family: var(--default-mono-font-family);
 }
 
 .e-content iframe {

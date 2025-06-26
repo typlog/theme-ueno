@@ -1,8 +1,12 @@
 import { defineConfig } from "vite"
+import tailwind from "@tailwindcss/vite"
 import { themeDevServer } from "@typlog/theme-dev-plugin/vite"
 
 export default defineConfig({
-  plugins: [themeDevServer()],
+  plugins: [
+    tailwind(),
+    themeDevServer(),
+  ],
   build: {
     minify: true,
     cssCodeSplit: true,

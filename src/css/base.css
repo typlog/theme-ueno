@@ -1,17 +1,15 @@
+@import "tailwindcss";
+
 body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  font-family: var(--text-font);
+  font-family: var(--content-font);
   color: var(--text-color);
   background-color: var(--background-color);
 }
 
 a {
   color: var(--accent-9);
-}
-
-a:hover {
-  text-decoration: underline;
 }
 
 img,

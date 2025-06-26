@@ -112,7 +112,9 @@ button.theme-switch {
   position: relative;
   padding: 0 80px;
   max-width: 680px;
+  box-sizing: content-box;
 }
+
 .main_mark:before {
   position: absolute;
   left: 0;

@@ -18,10 +18,8 @@
   {% include "./_partials/theme-switch.j2" %}
   <div class="body">
     {% include "./_partials/site-side.j2" %}
-    <div class="main">
-      <div class="inner main_mark" data-page-container>
-        {{ body }}
-      </div>
+    <div class="main ui-root" data-page-container data-radius="medium">
+      {{ body }}
     </div>
   </div>
   {% include "./_partials/site-foot.j2" %}
