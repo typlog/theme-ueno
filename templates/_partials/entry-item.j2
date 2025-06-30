@@ -25,7 +25,7 @@
       </a>
     {% endif %}
   </div>
-{% elif note.type == 'audio' %}
+{% elif note.audio %}
   {% set episode = note.audio %}
   <div id="item-{{ note.id }}" class="item Episode">
     {% if episode.image %}
@@ -49,7 +49,7 @@
       {%- endif -%}
     </a>
   </div>
-{% elif note.type == 'review' %}
+{% elif note.review %}
   {% set review = note.review %}
   <div id="item-{{ note.id }}" class="item Review">
     {% if review.item_image %}

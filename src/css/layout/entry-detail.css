@@ -113,18 +113,9 @@ time.dt-published {
   margin-bottom: 2em;
 }
 
-.entry-audio audio {
-  width: 100%;
-}
-
-.h-entry .entry-audio {
+.audio-player {
   margin-top: 20px;
   margin-bottom: 40px;
-}
-
-.h-entry .shk-player {
-  border: 1px solid var(--gray-a5);
-  font-family: inherit;
 }
 
 .entry-block {
