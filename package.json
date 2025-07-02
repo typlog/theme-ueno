@@ -7,12 +7,12 @@
     "start": "vite",
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "release": "release-theme"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.1.10",
-    "@typlog/theme-dev-plugin": "*",
-    "vite": "^6.3.0"
+    "@typlog/theme-dev-plugin": "^0.2.0",
+    "vite": "^7.0.0"
   },
   "dependencies": {
     "@radix-ui/colors": "^3.0.0",
