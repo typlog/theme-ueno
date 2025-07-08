@@ -1,11 +1,7 @@
-{% set has_content = 'class="e-content"' in body %}
-
 {% block styles %}
-{% if has_content %}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
-{% endif %}
 <link rel="stylesheet" href="{{ _static_url }}/page.css">
 {% endblock %}
 
@@ -18,7 +14,7 @@
   {% include "./_partials/theme-switch.j2" %}
   <div class="body">
     {% include "./_partials/site-side.j2" %}
-    <div class="main ui-root" data-page-container data-radius="medium">
+    <div class="main ui-root" data-page-container data-radius="medium" data-scaling="100%" data-has-background="true">
       {{ body }}
     </div>
   </div>
