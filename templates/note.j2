@@ -3,12 +3,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{{ _static_url }}/content.css">
-{% include "components/clipboard-copy.j2" %}
 {% endblock %}
 
 {% block scripts %}
-<script src="https://code.iconify.design/iconify-icon/2.2.0/iconify-icon.min.js"></script>
 <script src="{{ _static_url }}/index.js" type="module"></script>
+{% include "components/clipboard-copy.j2" %}
+{% include "components/iconify-icon.j2" %}
 {% include "components/lightbox.j2" %}
 {% endblock %}
 
