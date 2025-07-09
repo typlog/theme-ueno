@@ -1,6 +1,13 @@
+import fs from "node:fs"
 import { defineConfig } from "vite"
 import tailwind from "@tailwindcss/vite"
 import { themeDevServer } from "@typlog/theme-dev-plugin/vite"
+
+const entries = fs.readdirSync('src').filter(name => {
+  return /\.(js|css)$/.test(name)
+}).map(name => {
+  return `src/${name}`
+})
 
 export default defineConfig({
   plugins: [
@@ -12,12 +19,7 @@ export default defineConfig({
     cssCodeSplit: true,
     outDir: 'static',
     lib: {
-      entry: [
-        'src/index.js',
-        'src/index.css',
-        'src/content.css',
-        'src/page.css',
-      ],
+      entry: entries,
       formats: ['es'],
       fileName: (_, name) => `${name}.js`,
     }
