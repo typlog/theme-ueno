@@ -1,0 +1,16 @@
+{
+  "_static_url": "/src",
+  "theme_color_mode": "auto",
+  "theme_nav_links": [
+    {
+      "title": "Blog",
+      "link": "/blog/"
+    },
+    {
+      "title": "GitHub",
+      "link": "https://github.com/typlog/theme-ueno",
+      "new_tab": true
+    }
+  ],
+  "theme_copyright": "Copy &copy; 2024, <a href='https://typlog.com/'>Typlog</a>"
+}

@@ -6,22 +6,6 @@
   "repo": "typlog/theme-ueno",
   "image": "https://user-images.githubusercontent.com/290496/183670180-bfd89bab-18fe-45f8-a9bc-485695f0f075.png",
   "description": "A two columns theme for blogs and podcasts.",
-  "context": {
-    "_static_url": "/src",
-    "theme_color_mode": "auto",
-    "theme_nav_links": [
-      {
-        "title": "Blog",
-        "link": "/blog/"
-      },
-      {
-        "title": "GitHub",
-        "link": "https://github.com/typlog/theme-ueno",
-        "new_tab": true
-      }
-    ],
-    "theme_copyright": "Copy &copy; 2024, <a href='https://typlog.com/'>Typlog</a>"
-  },
   "config": [
     {
       "name": "color_mode",
