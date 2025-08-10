@@ -1,8 +1,1 @@
-@import "./css/layout/entry-detail.css";
-@import "./css/content/e-content.css";
-
-.ui-root > section:first-child,
-.ui-root > article:first-child,
-.ui-root > div:first-child {
-  padding-top: 0;
-}
+@import "./css/content/index.css";
