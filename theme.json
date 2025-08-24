@@ -2,7 +2,7 @@
   "name": "ueno",
   "name#ja": "上野",
   "name#zh": "上野",
-  "version": "0.5.1",
+  "version": "0.6.0",
   "repo": "typlog/theme-ueno",
   "image": "https://user-images.githubusercontent.com/290496/183670180-bfd89bab-18fe-45f8-a9bc-485695f0f075.png",
   "description": "A two columns theme for blogs and podcasts.",
