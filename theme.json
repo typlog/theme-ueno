@@ -8,34 +8,101 @@
   "description": "A two columns theme for blogs and podcasts.",
   "config": [
     {
-      "name": "color_mode",
-      "type": "enum",
-      "default": "auto",
-      "options": {
-        "choices": ["auto", "light", "dark"]
-      }
-    },
-    {
-      "name": "copyright",
-      "type": "string"
+      "friendlyName": "General",
+      "fields": [
+        {
+          "name": "color_mode",
+          "type": "enum",
+          "default": "auto",
+          "options": {
+            "choices": ["auto", "light", "dark"]
+          }
+        },
+        {
+          "name": "copyright",
+          "type": "string"
+        }
+      ]
     },
     {
       "name": "nav_links",
+      "friendlyName": "Navbar links",
       "type": "NavLink",
       "multiple": true,
       "options": {
-        "children": false
+        "children": true
       }
     },
     {
       "name": "podcast_links",
+      "friendlyName": "Podcast links",
       "type": "IconLink",
       "multiple": true
     },
     {
-      "name": "social_links",
-      "type": "IconLink",
-      "multiple": true
+      "friendlyName": "Social links",
+      "fields": [
+        {
+          "name": "x_url",
+          "friendlyName": "X (Twitter)",
+          "type": "url"
+        },
+        {
+          "name": "bluesky_url",
+          "friendlyName": "BlueSky",
+          "type": "url"
+        },
+        {
+          "name": "github_url",
+          "friendlyName": "GitHub",
+          "type": "url"
+        },
+        {
+          "name": "linkedin_url",
+          "friendlyName": "LinkedIn",
+          "type": "url"
+        },
+        {
+          "name": "discord_url",
+          "friendlyName": "Discord",
+          "type": "url"
+        },
+        {
+          "name": "youtube_url",
+          "friendlyName": "YouTube",
+          "type": "url"
+        },
+        {
+          "name": "reddit_url",
+          "friendlyName": "Reddit",
+          "type": "url"
+        },
+        {
+          "name": "social_links",
+          "type": "IconLink",
+          "multiple": true
+        }
+      ]
+    },
+    {
+      "friendlyName": "Sponsor links",
+      "fields": [
+        {
+          "name": "github_sponsor_url",
+          "friendlyName": "GitHub Sponsor",
+          "type": "url"
+        },
+        {
+          "name": "patreon_url",
+          "friendlyName": "Patreon",
+          "type": "url"
+        },
+        {
+          "name": "afdian_url",
+          "friendlyName": "爱发电",
+          "type": "url"
+        }
+      ]
     }
   ],
   "messages": {
@@ -55,6 +122,8 @@
     "switch_light#zh": "切换至明亮模式",
     "switch_dark": "Switch to dark color mode",
     "switch_dark#zh": "切换至黑暗模式",
+    "sponsor": "Support me via",
+    "sponsor#zh": "请通过以下方式赞助我",
     "copy": "Copy",
     "copy#zh": "复制"
   }
