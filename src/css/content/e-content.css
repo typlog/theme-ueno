@@ -199,6 +199,13 @@
   margin: auto;
 }
 
+:lang(zh) .e-content,
+:lang(zh-hant) .e-content,
+:lang(zh-hans) .e-content,
+:lang(ja) .e-content {
+  text-autospace: ideograph-alpha ideograph-numeric;
+}
+
 :lang(zh) .e-content em,
 :lang(zh-hant) .e-content em,
 :lang(zh-hans) .e-content em,
