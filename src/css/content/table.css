@@ -20,6 +20,7 @@
   vertical-align: top;
 }
 .block-table tr {
+  border: 0;
   border-bottom: 1px solid var(--gray-8);
 }
 .block-table thead tr {
