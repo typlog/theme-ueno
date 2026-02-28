@@ -13,9 +13,20 @@
     {% include "./_partials/site-side.j2" %}
     <div class="main">
       <div class="inner main_mark">
-        {% for note in query.paginate_notes() %}
+        {% set recent_notes = query.paginate_notes() %}
+        {% for note in recent_notes %}
           {% include "./_partials/entry-item.j2" %}
         {% endfor %}
+        <div class="navigation">
+          {% if recent_notes|count == 25 %}
+            <div class="navigation-next">
+              <a href="/archive/page/2/">
+                <span>{{ translate('next') }}</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+              </a>
+            </div>
+          {% endif %}
+        </div>
       </div>
     </div>
   </div>
